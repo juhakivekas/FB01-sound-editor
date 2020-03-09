@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/" >
+        <file alias="ALGO1" >imgs/algo1.bmp</file>
+        <file alias="ALGO2" >imgs/algo2.bmp</file>
+        <file alias="ALGO3" >imgs/algo3.bmp</file>
+        <file alias="ALGO4" >imgs/algo4.bmp</file>
+        <file alias="ALGO5" >imgs/algo5.bmp</file>
+        <file alias="ALGO6" >imgs/algo6.bmp</file>
+        <file alias="ALGO7" >imgs/algo7.bmp</file>
+        <file alias="ALGO8" >imgs/algo8.bmp</file>
+        <file alias="CLAVIER" >imgs/clavier.bmp</file>
+    </qresource>
+</RCC>

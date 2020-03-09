@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/bin/FB01v2
+Name=FB01 Sound Editor
+GenericName=FB01SE
+Comment=The editor for the Yamaha FB01 sound module.
+Icon=/usr/share/fb01-soundeditor/imgs/fb01.xpm
+Categories=GNOME;KDE;Qt;AudioVideo;

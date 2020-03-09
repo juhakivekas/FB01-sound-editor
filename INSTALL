@@ -1,0 +1,56 @@
+#############################################################################
+# FB01 Sound Editor V2.1
+# Makefile LINUX
+# Copyright Meslin Frédéric 2009 - 2010
+# This file is part of FB01 SE
+#
+# FB01 SE is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# FB01 SE is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with FB01 SE.  If not, see <http://www.gnu.org/licenses/>.
+#############################################################################
+
+In order to install this software you need :
+
+- This source archive unzipped in a proper directory
+- The Qt4 developpement files (you can get them with your package manager)
+- The alsa sound library (most of the time already installed on your system)
+- Enough hard disk room
+
+1) Compiling & installing procedure :
+
+Open a terminal in the project source folder and type the following commands :
+
+make all
+sudo make install
+
+If sudo is not available on your system, you can log in as super-user (with the
+su command which is not recommended) and type :
+
+make install
+
+2) Cleaning and removing procedure :
+
+To completely remove the software from your system, type the following commands :
+
+make uninstall
+
+To clean the object files and other intermediary compiler files of the source
+folder you can enter the command :
+
+make clean
+
+3) Other makefile rules
+
+make release	: produces the same executable as the make all directive
+make debug		: produces a debug enable version of the executable
+
+Frédéric

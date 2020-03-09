@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QBank</class>
+ <widget class="QWidget" name="QBank">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>291</width>
+    <height>241</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="grpBox_bank">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>291</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>Bank :</string>
+   </property>
+   <widget class="QTableWidget" name="listWidget_voices">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>271</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::ExtendedSelection</enum>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>100</number>
+    </attribute>
+   </widget>
+   <widget class="QPlainTextEdit" name="txtEdit_bankName">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>180</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="maximumBlockCount">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_bankName">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>182</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Bank :</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txtEdit_voiceName">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>210</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="maximumBlockCount">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_voiceName">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>212</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Voice :</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBox_style">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>210</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The style of the voice (stored as user code)</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Piano</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Keys</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Organ</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Guitar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bass</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Orch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Brass</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Wood</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Synth</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Pad</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ethnic</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Bells</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Rythm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SFX</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Other</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="lbl_style">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>212</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Style :</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

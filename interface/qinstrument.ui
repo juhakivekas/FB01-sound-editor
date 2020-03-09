@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QInstrument</class>
+ <widget class="QWidget" name="QInstrument">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>111</width>
+    <height>474</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="grpBox_instru">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>111</width>
+     <height>471</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>Instrument :</string>
+   </property>
+   <widget class="QPushButton" name="pshBut_LFO">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The LFO enable state</string>
+    </property>
+    <property name="text">
+     <string>Enable</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pshBut_poly">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The instrument response to a multiple notes play</string>
+    </property>
+    <property name="text">
+     <string>Poly</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBox_pmdctl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The kind of MIDI controler assigned to PMD</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Not assigned</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>After touch</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mod. wheel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Breath ctl.</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Foot ctl.</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="cmbBox_upper">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The upper limit of the keyboard playing range</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cmbBox_lower">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The lower limit of the keyboard playing range</string>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_notes">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The polyphony level of the instrument</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>8</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_channel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The MIDI channel of the instrument</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>16</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_bank">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The current bank of the selected voice</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>7</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_voice">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The current number of the selected voice</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>1</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>48</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_trans">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The transpose level of the instrument</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>-2</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_detune">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The detune level of the instrument</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>-64</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>63</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_porta">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The portamento length of the instrument</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>127</number>
+    </property>
+   </widget>
+   <widget class="QButton" name="but_pitch">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>The pitchbender range of the instrument</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="minValue" stdset="0">
+     <number>0</number>
+    </property>
+    <property name="maxValue" stdset="0">
+     <number>12</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="hzSlider_volume">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>The output level of the instrument</string>
+    </property>
+    <property name="maximum">
+     <number>127</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="hzSlider_pan">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>The output panning of the instrument</string>
+    </property>
+    <property name="maximum">
+     <number>127</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QButton</class>
+   <extends>QPushButton</extends>
+   <header>interface/qbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

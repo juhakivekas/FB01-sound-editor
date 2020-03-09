@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>632</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>632</width>
+    <height>632</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>FB01 : Sound Editor V2.1</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>2000</width>
+     <height>2000</height>
+    </size>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>641</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>65535</width>
+      <height>65535</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_config">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>Configuration</string>
+     </attribute>
+     <widget class="QGroupBox" name="grpBox_MIDI">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>351</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="title">
+       <string>MIDI Ports :</string>
+      </property>
+      <widget class="QComboBox" name="cmbBox_MIDIIn">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>20</y>
+         <width>261</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Select the device for MIDI IN</string>
+       </property>
+       <property name="maxVisibleItems">
+        <number>15</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cmbBox_MIDIOut">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>50</y>
+         <width>261</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Select the device for MIDI OUT</string>
+       </property>
+       <property name="maxVisibleItems">
+        <number>15</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_refresh_midi">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>110</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Refresh the device lists</string>
+       </property>
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_MIDIIn">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>22</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>IN :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_MIDIOut">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>52</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>OUT :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_MIDICtrl">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>82</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>CTRL :</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cmbBox_MIDICtrl">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>80</y>
+         <width>261</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Select an other MIDI device for sending data to the module while being edited </string>
+       </property>
+       <property name="maxVisibleItems">
+        <number>15</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_INToOUT">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>110</y>
+         <width>75</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>IN -&gt; OUT</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_CTRLToOUT">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>110</y>
+         <width>75</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>IN -&gt; OUT</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_Route">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>113</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Route :</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QConfig" name="widget_config" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>591</width>
+        <height>242</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="grpBox_VKey">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>30</y>
+        <width>191</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Virtual keyboard :</string>
+      </property>
+      <widget class="QButton" name="but_kybchan">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>20</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the MIDI channel of the virtual keyboard</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+       <property name="minValue" stdset="0">
+        <number>1</number>
+       </property>
+       <property name="maxValue" stdset="0">
+        <number>16</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_kybvel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Note velocity :</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_kybchan">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>MIDI channel :</string>
+       </property>
+      </widget>
+      <widget class="QButton" name="but_kybvelo">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>50</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the velocity parameter of the virtual keyboard</string>
+       </property>
+       <property name="text">
+        <string>100</string>
+       </property>
+       <property name="minValue" stdset="0">
+        <number>0</number>
+       </property>
+       <property name="maxValue" stdset="0">
+        <number>127</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_kybQWERTY">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Use QWERTY keyboard</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_kybAZERTY">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>171</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Use AZERTY keyboard</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_automation">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <attribute name="title">
+      <string>Automations</string>
+     </attribute>
+     <widget class="QAutomation" name="widget_automation" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>611</width>
+        <height>342</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_banks">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>Banks</string>
+     </attribute>
+     <widget class="QFrame" name="frame_bank_1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>611</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <widget class="QBank" name="widget_bank_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>10</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_2">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QBank" name="widget_bank_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>260</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_3">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QBank" name="widget_bank_1" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_1">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QBank" name="widget_bank_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>260</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_4">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_bank_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>611</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <widget class="QBank" name="widget_bank_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_5">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QBank" name="widget_bank_7" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>260</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_7">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QBank" name="widget_bank_6" native="true">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>10</y>
+         <width>291</width>
+         <height>241</height>
+        </rect>
+       </property>
+       <widget class="QPushButton" name="pshBut_bank_cur_6">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>180</y>
+          <width>71</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Set the current bank to be edited</string>
+        </property>
+        <property name="text">
+         <string>Current</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pshBut_nextBank">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>508</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Change the current instrument page </string>
+      </property>
+      <property name="text">
+       <string>Next page</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_loadAll">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>508</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Load all</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_loadCurrent">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>508</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Load current</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_copyBank">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>508</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Copy</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_pasteBank">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>508</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Paste</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_exchangeBank">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>508</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Exchange</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_set">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>Current Set</string>
+     </attribute>
+     <widget class="QLabel" name="lbl_notes">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Num of notes :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_midichan">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>MIDI Channel :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_upper">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Upper limit :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_lower">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Lower limit :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_bank">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Bank :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_voice">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Voice :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_detune">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Detune :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_transpose">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Transpose :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_LFO">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>270</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Enable LFO :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_porta">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>330</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Porta. time :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_pitch">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>360</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pitch bender :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_poly">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>300</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Mono / Poly :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_pmdctl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>390</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>PMD Control. :</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_nextSet">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>490</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Change the current instrument page </string>
+      </property>
+      <property name="text">
+       <string>Next page</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_set_1">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>501</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <widget class="QInstrument" name="widget_instru_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_1" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_4">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>480</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>480</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_3">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>480</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>81</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QFrame" name="frame_set_2">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>10</y>
+        <width>501</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <widget class="QInstrument" name="widget_instru_8" native="true">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_6" native="true">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QInstrument" name="widget_instru_7" native="true">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>0</y>
+         <width>111</width>
+         <height>471</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_8">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>480</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_6">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>480</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_7">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>480</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pshBut_inst_cur_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>480</y>
+         <width>91</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Set the current instrument to be edited</string>
+       </property>
+       <property name="text">
+        <string>Current</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="lbl_pan">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>450</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Pan :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_volume">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>420</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Volume :</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_voice">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>Current Voice</string>
+     </attribute>
+     <widget class="QVoice" name="widget_voice" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>591</width>
+        <height>264</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_operas">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <attribute name="title">
+      <string>Current Operators</string>
+     </attribute>
+     <widget class="QOperateur" name="widget_opera_1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="pshBut_OPon_1">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>20</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Enable the output of the operator</string>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QOperateur" name="widget_opera_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>10</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="pshBut_OPon_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>20</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Enable the output of the operator</string>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QOperateur" name="widget_opera_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>270</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="pshBut_OPon_3">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>20</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Enable the output of the operator</string>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QOperateur" name="widget_opera_4" native="true">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>270</y>
+        <width>271</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <widget class="QPushButton" name="pshBut_OPon_4">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>20</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Enable the output of the operator</string>
+       </property>
+       <property name="text">
+        <string>On</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pshBut_op_cur_1">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>240</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Set the current operator to be edited</string>
+      </property>
+      <property name="text">
+       <string>Current</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_op_cur_2">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>240</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Set the current operator to be edited</string>
+      </property>
+      <property name="text">
+       <string>Current</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_op_cur_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>500</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Set the current operator to be edited</string>
+      </property>
+      <property name="text">
+       <string>Current</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pshBut_op_cur_4">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>500</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>Set the current operator to be edited</string>
+      </property>
+      <property name="text">
+       <string>Current</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QClavier" name="lbl_clavier">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>560</y>
+      <width>601</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string>The virtual keyboard sends notes to the VKey channel
+with the VKey velocity. If previously hitten, notes can be
+played with the computer's keyboard.</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>:/CLAVIER</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>632</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuLoad">
+     <property name="title">
+      <string>Load</string>
+     </property>
+     <addaction name="actionLoad_set"/>
+     <addaction name="actionLoad_voice"/>
+     <addaction name="separator"/>
+     <addaction name="actionLoad_automations"/>
+    </widget>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="actionSave_set"/>
+     <addaction name="actionSave_voice"/>
+     <addaction name="separator"/>
+     <addaction name="actionSave_automations"/>
+    </widget>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>Import</string>
+     </property>
+     <addaction name="actionImport_bank"/>
+     <addaction name="actionImport_set"/>
+     <addaction name="actionImport_voice"/>
+    </widget>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <addaction name="actionExport_bank"/>
+     <addaction name="actionExport_set"/>
+     <addaction name="actionExport_voice"/>
+    </widget>
+    <addaction name="menuLoad"/>
+    <addaction name="menuSave"/>
+    <addaction name="separator"/>
+    <addaction name="menuImport"/>
+    <addaction name="menuExport"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout_FB01SE"/>
+    <addaction name="actionAbout_Qt"/>
+    <addaction name="separator"/>
+    <addaction name="actionRead_this"/>
+   </widget>
+   <widget class="QMenu" name="menuFB01">
+    <property name="title">
+     <string>FB01</string>
+    </property>
+    <widget class="QMenu" name="menuGet">
+     <property name="title">
+      <string>Get ..</string>
+     </property>
+     <addaction name="actionGet_current_bank"/>
+     <addaction name="actionGet_current_set"/>
+     <addaction name="actionGet_current_voice"/>
+    </widget>
+    <widget class="QMenu" name="menuSend">
+     <property name="title">
+      <string>Send ...</string>
+     </property>
+     <addaction name="actionSend_current_config"/>
+     <addaction name="separator"/>
+     <addaction name="actionSend_current_bank"/>
+     <addaction name="actionSend_current_set"/>
+     <addaction name="actionSend_current_voice"/>
+    </widget>
+    <addaction name="menuGet"/>
+    <addaction name="menuSend"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionInitialize"/>
+    <addaction name="actionRandomize"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionExchange"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFB01"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionAbout_FB01SE">
+   <property name="text">
+    <string>About FB01 SE...</string>
+   </property>
+  </action>
+  <action name="actionUser_manual">
+   <property name="text">
+    <string>User manual ...</string>
+   </property>
+  </action>
+  <action name="actionLoad_set">
+   <property name="text">
+    <string>Load set ...</string>
+   </property>
+  </action>
+  <action name="actionSave_set">
+   <property name="text">
+    <string>Save set ...</string>
+   </property>
+  </action>
+  <action name="actionLoad_voice">
+   <property name="text">
+    <string>Load voice ...</string>
+   </property>
+  </action>
+  <action name="actionSave_voice">
+   <property name="text">
+    <string>Save voice ...</string>
+   </property>
+  </action>
+  <action name="actionRead_this">
+   <property name="text">
+    <string>Read this ...</string>
+   </property>
+  </action>
+  <action name="actionSend_current_set">
+   <property name="text">
+    <string>Send current set</string>
+   </property>
+  </action>
+  <action name="actionSend_current_voice">
+   <property name="text">
+    <string>Send current voice</string>
+   </property>
+  </action>
+  <action name="actionGet_current_set">
+   <property name="text">
+    <string>Get current set</string>
+   </property>
+  </action>
+  <action name="actionGet_current_voice">
+   <property name="text">
+    <string>Get current voice</string>
+   </property>
+  </action>
+  <action name="actionGet_current_config">
+   <property name="text">
+    <string>Get current config</string>
+   </property>
+  </action>
+  <action name="actionSend_current_config">
+   <property name="text">
+    <string>Send current config</string>
+   </property>
+  </action>
+  <action name="actionRandomize">
+   <property name="text">
+    <string>Randomize</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionInitialize">
+   <property name="text">
+    <string>Initialize</string>
+   </property>
+  </action>
+  <action name="actionGet_current_bank">
+   <property name="text">
+    <string>Get current bank</string>
+   </property>
+  </action>
+  <action name="actionRam_1">
+   <property name="text">
+    <string>Ram 1</string>
+   </property>
+  </action>
+  <action name="actionRam_2">
+   <property name="text">
+    <string>Ram 2</string>
+   </property>
+  </action>
+  <action name="actionExchange">
+   <property name="text">
+    <string>Exchange</string>
+   </property>
+  </action>
+  <action name="actionLoad_bank">
+   <property name="text">
+    <string>Load bank ...</string>
+   </property>
+  </action>
+  <action name="actionSave_bank">
+   <property name="text">
+    <string>Save bank ...</string>
+   </property>
+  </action>
+  <action name="actionImport_bank">
+   <property name="text">
+    <string>Import bank ...</string>
+   </property>
+  </action>
+  <action name="actionImport_set">
+   <property name="text">
+    <string>Import set ...</string>
+   </property>
+  </action>
+  <action name="actionImport_voice">
+   <property name="text">
+    <string>Import voice ...</string>
+   </property>
+  </action>
+  <action name="actionExport_bank">
+   <property name="text">
+    <string>Export bank ...</string>
+   </property>
+  </action>
+  <action name="actionExport_set">
+   <property name="text">
+    <string>Export set ...</string>
+   </property>
+  </action>
+  <action name="actionExport_voice">
+   <property name="text">
+    <string>Export voice ...</string>
+   </property>
+  </action>
+  <action name="actionSend_current_bank">
+   <property name="text">
+    <string>Send current bank</string>
+   </property>
+  </action>
+  <action name="actionHsgg">
+   <property name="text">
+    <string>hsgg</string>
+   </property>
+  </action>
+  <action name="actionSdsd">
+   <property name="text">
+    <string>sdsd</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt ...</string>
+   </property>
+  </action>
+  <action name="actionLoad_automations">
+   <property name="text">
+    <string>Load automations ...</string>
+   </property>
+  </action>
+  <action name="actionSave_automations">
+   <property name="text">
+    <string>Save automations ...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QButton</class>
+   <extends>QPushButton</extends>
+   <header>interface/qbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QClavier</class>
+   <extends>QLabel</extends>
+   <header>interface/qclavier.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QInstrument</class>
+   <extends>QWidget</extends>
+   <header>interface/qinstrument.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QOperateur</class>
+   <extends>QWidget</extends>
+   <header>interface/qoperateur.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QVoice</class>
+   <extends>QWidget</extends>
+   <header>interface/qvoice.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QBank</class>
+   <extends>QWidget</extends>
+   <header>interface/qbank.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QConfig</class>
+   <extends>QWidget</extends>
+   <header>interface/qconfig.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QAutomation</class>
+   <extends>QWidget</extends>
+   <header>interface/qautomation.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
