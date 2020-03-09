@@ -97,9 +97,9 @@ win32 {
 }
 linux {
     DEFINES += LINUX
-    LIBS += -lasound
+    LIBS += -lasound -lX11
 }
 unix { 
     DEFINES += LINUX
-    LIBS += -lasound
+    LIBS += -lasound -lX11
 }
